@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="videoScript.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      video {
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        display: block;
+      }
+      button {
+        display: inline;
+      }
+      canvas {
+        position: absolute;
+        margin-left: -720px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="stopVideo()">Stop</button>
+    <button onclick="startVideo()">Start</button>
+    <input type="file" id="input" multiple />
+
+    <header id="videoHolder" width="720" height="560">
+      <video id="video" width="720" height="560"></video>
+    </header>
+    <div id="emotionTimelapse"></div>
+    <div id="totalBarChart"></div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+  </body>
+</html>
