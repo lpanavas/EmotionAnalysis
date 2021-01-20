@@ -19,7 +19,7 @@ function imageIsLoaded() {
 }
 
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUrl("/EmotionAnalysis/models"),
+  faceapi.nets.tinyFaceDetector.loadFromUri("/EmotionAnalysis/models"),
   faceapi.nets.faceLandmark68Net.loadFromUri("/EmotionAnalysis/models"),
   faceapi.nets.faceRecognitionNet.loadFromUri("/EmotionAnalysis/models"),
   faceapi.nets.faceExpressionNet.loadFromUri("/EmotionAnalysis/models"),
